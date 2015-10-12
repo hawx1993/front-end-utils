@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload = function(){
+            var oC = document.getElementById('ch1');
+            var oGC = oC.getContext('2d');
+
+            function drawClock(){
+                var x = 200;   //指定坐标
+                var y = 200;
+                var r = 150;  //指定钟表半径
+
+                oGC.clearRect(0,0,oC.width,oC.height);//清空画布
+
+                var oDate = new Date();      //创建日期对象
+                var oHours = oDate.getHours();//获取时间
+                var oMin = oDate.getMinutes();
+                var oSen = oDate.getSeconds();
+
+                var oHoursValue = (-90 + oHours*30 + oMin/2)*Math.PI/180; //设置时针的值
+                var oMinValue = (-90 + oMin*6)*Math.PI/180;
+                var oSenValue = (-90 + oSen*6)*Math.PI/180;
+
+                oGC.beginPath();//开始
+
+                for(var i=0;i<60;i++){         //i为60，代表着时钟的60个小刻度
+                    oGC.moveTo(x,y);
+                    oGC.arc(x,y,r,6*i*Math.PI/180,6*(i+1)*Math.PI/180,false); //循环从6度到12度
+                }
+                oGC.closePath();
+                oGC.stroke();
+
+                oGC.fillStyle ='white'; //覆盖住小刻度的黑色线
+                oGC.beginPath();
+                oGC.moveTo(x,y);
+                oGC.arc(x,y,r*19/20,0,360*(i+1)*Math.PI/180,false);
+
+                oGC.closePath();//结束
+                oGC.fill();
+
+                oGC.lineWidth = 3; //设置时钟圆盘大刻度的粗细值
+                oGC.beginPath();  //开始画大的时钟刻度
+
+                for(i=0;i<12;i++){              //i为12，代表着时钟刻度的12大格
+                    oGC.moveTo(x,y);
+                    oGC.arc(x,y,r,30*i*Math.PI/180,30*(i+1)*Math.PI/180,false); // 间隔为30度，弧度=角度*Math.PI/180
+                }
+                oGC.closePath();
+                oGC.stroke();
+
+                oGC.fillStyle ='white'; //覆盖住大刻度的黑色线
+                oGC.beginPath();
+                oGC.moveTo(x,y);
+                oGC.arc(x,y,r*18/20,360*(i+1)*Math.PI/180,false);
+
+                oGC.closePath();
+                oGC.fill();//表盘完成
+
+                oGC.lineWidth = 5;//设置时针宽度
+                oGC.beginPath();//开始绘制时针
+                oGC.moveTo(x,y);
+
+                oGC.arc(x,y,r*10/20,oHoursValue,oHoursValue,false);//设置时针大小和弧度
+                oGC.closePath();
+                oGC.stroke();
+
+                oGC.lineWidth = 3;//设置分针宽度
+                oGC.beginPath();//开始绘制分针
+                oGC.moveTo(x,y);
+
+                oGC.arc(x,y,r*14/20,oMinValue,oMinValue,false);//设置分针大小和弧度
+                oGC.closePath();
+                oGC.stroke();
+
+                oGC.lineWidth = 1;//设置秒针宽度
+                oGC.beginPath();//开始绘制秒针
+                oGC.moveTo(x,y);
+
+                oGC.arc(x,y,r*19/20,oSenValue,oSenValue,false);//设置秒针大小和弧度
+                oGC.closePath();
+                oGC.stroke();
+            }
+            setInterval(drawClock,1000);//设置定时器，让时钟运转起来
+            drawClock();
+        };
+    </script>
+</head>
+<body>
+<canvas id = "ch1" width = "400px" height = "400px"></canvas>
+</body>
+</html>

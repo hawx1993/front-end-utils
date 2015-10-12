@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<div id="calculator">
+    <div class="top">
+        <span class="clear" data-value="C">C</span>
+        <div id="calculate_outPut" class="input"></div>
+        <div class="result"></div>
+    </div>
+    <div class="keys" id="calculate_num">
+        <!--data-value 是HTML5推荐的命名方式，用于定义要缓存的数据-->
+        <span data-value = '7'>7</span>
+        <span data-value = '8'>8</span>
+        <span data-value = '9'>9</span>
+        <span class="operator" data-value = '÷'>÷</span>
+
+        <span data-value = '4'>4</span>
+        <span data-value = '5'>5</span>
+        <span data-value = '6'>6</span>
+        <span class="operator" data-value="*">x</span>
+
+        <span data-value="1">1</span>
+        <span data-value="2">2</span>
+        <span data-value="3">3</span>
+        <span class="operator" data-value="-">-</span>
+
+        <span data-value="0">0</span>
+        <span data-value=".">.</span>
+        <span class="equals" data-value="=">=</span>
+        <span class="operator" data-value="+">+</span>
+    </div>
+</div>
+</body>
+</html>

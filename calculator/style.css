@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial,sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+    background: radial-gradient(circle,#fff,#ddd);
+    background-size: cover;
+}
+#calculator{
+    width: 12em;
+    height: auto;
+    background: linear-gradient(#4484A1,#5c258d);
+    margin: 1em auto;
+}
+
+.top span.clear{
+    float: left;
+    box-shadow: 0 4px #ff7c87;
+    color: #fff;
+}
+.top .input{
+    height: 3em;
+    width: 9em;
+    padding-right: 1em;
+    float: right;
+    color: #fff;
+    line-height: 3em;
+    text-align: right;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+.keys,.top {
+    overflow:hidden;
+}
+
+.keys span,.top span.clear {
+    float:left;
+    cursor:pointer;
+    width:3em;
+    height:3em;
+    line-height: 3em;
+    color:#fff;
+    text-align:center;
+    user-select:none;
+    transition: background-color .2s ease;
+    border-right: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.keys span.operator {
+    background:rgba(255,255,255,0.2);
+    border-right: 0;
+    color: rgba(0,0,0,0.5);
+}
+
+.keys span.equals {
+    color:#888e5f;
+}
+
+.keys span:hover {
+    background:rgba(255,255,255,0.3);
+    color:#FFF;
+}
+
+.keys span.equals:hover {
+    background:rgba(255,255,255,0.2);
+    color:#fff;
+}
+
+.top span.clear:hover {
+    background:rgba(255,255,255,0.2);
+    color:#FFF;
+}
+
