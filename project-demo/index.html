@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>vanilla</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./style/style.css"/>
+    <link rel="stylesheet" href="./style/hybrid.css"/>
+    <link rel="stylesheet" href="./style/default.css"/>
+    <script src="headroom.js"></script>
+    <script src="highlight.pack.js"></script>
+</head>
+<body>
+
+<!--头部导航条开始-->
+<header class="header headroom">
+    <div class="container">
+        <nav class="nav-wrapper">
+            <ul class="nav">
+                <li class="items"><a href="#">Github</a></li>
+                <li class="items"><a href="#">@weibo</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="header-link">
+            <b class="subname">Vanilla</b>
+            <b class="supname">.js</b>
+        </a>
+    </div>
+</header>
+<!--头部内容展示区开始-->
+<div class="hd-content">
+    <div class="hd-main">
+        <h1 class="hd-title">Vanilla</h1>
+        <h1 class="hd-js">.js</h1>
+        <p class="hd-subtitle">Give your pages some headroom. Hide your header until you need it.</p>
+    </div>
+</div>
+
+<div class="main-content">
+    <h2>Downloads</h2>
+    <div class="downloads">
+        <div class="grid">
+            <div class="grid-left"><a href="#" >Development</a></div>
+            <div class="grid-right"><a href="#" >Production</a></div>
+        </div>
+    </div>
+    <h2>主要介绍</h2>
+    <p><code class="md">Headroom.js</code>is a lightweight, high-performance JS widget (with no dependencies!) that allows you to react to the user's scroll. The header on this site is a living example, it slides out of view when scrolling down and slides back in when scrolling up.
+
+        Why use it?
+
+        Fixed headers are a popular approach for keeping the primary navigation in close proximity to the user. This can reduce the effort required for a user to quickly navigate a site, but they are not without problems…
+
+        Large screens are usually landscape-oriented, meaning less vertical than horizontal space. A fixed header can therefore occupy a significant portion of the content area. Small screens are typically used in a portrait orientation. Whilst this results in more vertical space, because of the overall height of the screen a meaningfully-sized header can still be quite imposing.
+
+        Headroom.js allows you to bring elements into view when appropriate, and give focus to your content the rest of the time.
+
+        How does it work?
+
+        At it's most basic headroom.js simply adds and removes CSS classes from an element in response to a scroll event:
+
+        <code class="md">Headroom.js</code> is a lightweight, high-performance JS widget (with no dependencies!) that allows you to react to the user's scroll. The header on this site is a living example, it slides out of view when scrolling down and slides back in when scrolling up. Why use it? Fixed headers are a popular approach for keeping the primary navigation in close proximity to the user. This can reduce the effort required for a user to quickly navigate a site, but they are not without problems… Large screens are usually landscape-oriented, meaning less vertical than horizontal space. A fixed header can therefore occupy a significant portion of the content area. Small screens are typically used in a portrait orientation. Whilst this results in more vertical space, because of the overall height of the screen a meaningfully-sized header can still be quite imposing. Headroom.js allows you to bring elements into view when appropriate, and give focus to your content the rest of the time. How does it work? At it's most basic <code class="md">headroom.js</code> simply adds and removes CSS classes from an element in response to a scroll event:
+
+    </p>
+    <!--在code标签里放置你的代码-->
+    <pre>
+        <code class="javascript">
+            $(document).ready(function() {
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+            });
+        });
+        </code>
+    </pre>
+</div>
+<script type="text/javascript">
+    var myElement = document.querySelector("header");
+    var headroom = new Headroom(myElement);
+    headroom.init();
+
+    //highlight.js
+    hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>

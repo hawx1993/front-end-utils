@@ -1,0 +1,63 @@
+/*公共样式*/
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    font-size: 12px;
+    color:#3c3c3c;
+}
+li{
+    list-style: none;
+}
+/*内容开始*/
+#main{
+    position: relative;
+    top: 100px;
+    left: 500px;
+    width: 300px;
+    height: 100px;
+    border: 1px solid #E8E8E8;
+    overflow: hidden;
+}
+#title{
+    position: relative;
+    background-color: #F7F7F7;
+    height: 30px;
+    color: #3c3c3c;
+}
+#title li{
+    float: left;
+    width: 58px;
+    overflow: hidden;
+    height: 30px;
+    line-height: 26px;
+    text-align: center;
+    padding:0 1px;
+}
+#title li.select{
+    color: #3c3c3c;
+    background-color: white;
+    border-bottom-color: #fff;
+    font-weight: bolder;
+    border-left:1px solid #fff;
+    border-right: 1px solid #fff;
+    padding: 0;
+}
+#title li a:hover{
+    color: #f90;
+}
+.con {
+    margin: 14px 4px;
+}
+#content .con ul li{
+    height: 25px;
+    overflow: hidden;
+    float: left;
+    width: 143px;
+    line-height: 25px;
+}
+.con ul li a:hover{
+    color: #FF5B00;
+}

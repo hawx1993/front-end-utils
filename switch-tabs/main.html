@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>switch tabs</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script/require.js" data-main="script/main"></script>
+</head>
+<body>
+<div class="main" id="demo">
+    <div class="main-nav">
+        <ul>
+            <li>选项卡1</li>
+            <li>选项卡2</li>
+            <li>选项卡3</li>
+            <li>选项卡4</li>
+        </ul>
+    </div>
+    <!--content-->
+    <div class="main-content">
+        <div class="content-item">
+            <img src="img/loading.gif" data-echo="img/1.jpg" width="1366" height="640"/>
+        </div>
+        <div class="content-item">
+            <!--
+            1.合适的时机创建元素
+                - 原先的元素是已经存在的，以及是否考虑SEO
+                    - 考虑，使用ALT。但是脚本加载的适合取消ALT
+                - 原先的元素不存在，动态创建，考虑鼠标hover后的展示。
+            2.使用适当的占位元素。
+                - 程序是相册类，默认缩放，且图片大于视区。
+                - 程序是图文混排的内容类，图片考虑最大尺寸，加载后不会影响正常阅读。
+            3.视区之外的元素，不加载，快速滚动过的元素不加载，节约流量。
+            4.使用合理的元素，预防加载失败的时候事件触发bug。
+            5.图片加载失败的容灾。
+            6.使用配置初始化。
+            7.图片自适应。
+            8.支持移动的话，资源回收。
+            -->
+            <img src="img/loading.gif" data-echo="img/1.jpg" width="1366" height="640"/>
+            <img src="img/loading.gif" data-echo="img/2.jpg" width="1366" height="640"/>
+            <img src="img/loading.gif" data-echo="img/3.jpg" width="1366" height="640"/>
+            <img src="img/loading.gif" data-echo="img/4.jpg" width="1366" height="640"/>
+        </div>
+        <div class="content-item">
+            transition-timing-function的值允许你根据时间的推进去改变属性值的变换速率，transition-timing-function有6个可能值：
+            transition-timing-function的值允许你根据时间的推进去改变属性值的变换速率，transition-timing-function有6个可能值：
+            transition-timing-function的值允许你根据时间的推进去改变属性值的变换速率，transition-timing-function有6个可能值：
+        </div>
+        <div class="content-item">
+            同样,JavaScript可以使用类来查找DOM中的元素,它也可以添加或删除类来改变元素的样式。但这可能产生一个问题,如果这些类不是明显区别于出现在页面加载中的类。<br/>
+
+            如果JavaScript对关于组件样式代码知道的太多,下面的情况将变得非常平常，一个CSS开发人员修改样式表并没有意识到他正在破坏关键的功能。
+            <br/><br/><br/>
+            <img src="img/loading.gif" data-echo="img/5.jpg" width="1366" height="640"/>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+*{margin: 0;padding: 0}
+#box{
+    position: relative;
+    width: 1000px;
+    height: 410px;
+    margin: 40px auto;
+    background: #333;
+    overflow: hidden;
+}
+#box .img{
+    width: 9999px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+#box .img li{float: left}
+#box .pre{
+    position: absolute;
+    top: 190px;
+    left: 10px;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    background: url("images/l.png") no-repeat;
+    z-index: 2;
+}
+#box .next{
+    position: absolute;
+    top: 190px;
+    right: 10px;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    background: url("images/r.png") no-repeat;
+    z-index: 2;
+}
+#box .dot{
+    width: 130px;
+    height: 15px;
+    position: absolute;
+    bottom: 15px;
+    left: 440px;
+    z-index: 2;
+}
+#box .dot ul{
+    width: 120px;
+    margin: 0 auto;
+}
+#box .dot li{
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 10px;
+    background: #fff;
+    float: left;
+    overflow: hidden;
+    *display: inline;
+    *zoom: 1;
+}
+#box .dot .cur{background: #69aaec;}
