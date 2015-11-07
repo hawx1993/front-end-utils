@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="carousel-wrapper">
+    <div id="carousel-list">
+        <a href="#"><img src="img/1.png" alt="微信支付抽乐视会员卡"/></a>
+        <a href="#"><img src="img/2.png" alt="黑客马拉松大赛"/></a>
+        <a href="#"><img src="img/3.png" alt="此地有银三百两，举报刷单拿悬赏"/></a>
+    </div>
+    <ul id="pagination"></ul>
+</div>
+<script src="scroll.js"></script>
+<script type="text/javascript">
+    //参数依次是：分页按钮数目，包裹图片的父级元素，分页按钮
+    carousel.scroll(3,'carousel-list','pagination');
+</script>
+</body>
+</html>
